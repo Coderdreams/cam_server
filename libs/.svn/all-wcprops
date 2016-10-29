@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/visualpos/!svn/ver/876/Code/Branches/PosScreenSurveillance/resources/cam_server/libs
+END
+TcpServer.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/visualpos/!svn/ver/869/Code/Branches/PosScreenSurveillance/resources/cam_server/libs/TcpServer.hxx
+END
+Exceptions.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/visualpos/!svn/ver/869/Code/Branches/PosScreenSurveillance/resources/cam_server/libs/Exceptions.hxx
+END
+SelectHttpServer.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/visualpos/!svn/ver/876/Code/Branches/PosScreenSurveillance/resources/cam_server/libs/SelectHttpServer.cxx
+END
+Socket.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/visualpos/!svn/ver/871/Code/Branches/PosScreenSurveillance/resources/cam_server/libs/Socket.cxx
+END
+SelectHttpServer.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/visualpos/!svn/ver/876/Code/Branches/PosScreenSurveillance/resources/cam_server/libs/SelectHttpServer.hxx
+END
+Socket.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/visualpos/!svn/ver/869/Code/Branches/PosScreenSurveillance/resources/cam_server/libs/Socket.hxx
+END
+TcpServer.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/visualpos/!svn/ver/871/Code/Branches/PosScreenSurveillance/resources/cam_server/libs/TcpServer.cxx
+END

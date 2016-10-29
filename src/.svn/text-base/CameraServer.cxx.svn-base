@@ -1,0 +1,79 @@
+
+#include "CameraServer.hxx"
+
+CameraServer::CameraServer(
+    char* dev_name, 
+    unsigned int version,
+    bool drawBanner,
+    char* title, 
+    char* subtitle,
+    char* positionedText, 
+    int httpServerPortNumber
+) : portNumber(httpServerPortNumber)
+{
+    processor = new ImageProcessor(drawBanner, title, subtitle, positionedText);
+    if (version == 1) {
+        capture = new CaptureV4L1(dev_name);
+    } else if (version == 2) {
+        capture = new CaptureV4L2(dev_name);
+    } else {
+        printf("Bad v4l version specified {%u}\n", version);
+        exit(EXIT_FAILURE);
+    }
+
+    capture->init_device();
+    capture->start_capturing();
+}
+
+CameraServer::~CameraServer()
+{
+    delete processor;
+    delete capture;
+    delete server;
+}
+
+void CameraServer::setPositionedText(char* positionedText)
+{
+    processor->setPositionedText(positionedText);
+}
+
+void CameraServer::clearPositionedText()
+{
+    processor->clearPositionedText();
+}
+
+int* CameraServer::getImageSize()
+{
+    return capture->getImageSize();
+}
+
+void CameraServer::start()
+{
+    server = new HttpServer(this, portNumber);
+    server->startServer();
+}
+
+void CameraServer::startThread()
+{
+    server = new HttpServer(this, portNumber);
+    server->startThread();
+}
+
+void CameraServer::stopThread()
+{
+    server->stopThread();
+}
+
+char* CameraServer::readFrame(int* size) {
+    int buffSize, width, height, palette, processedSize = 0;
+    unsigned char *buffer;
+    char *processedBuffer;
+
+    buffer = capture->read_frame(&buffSize, &palette, &width, &height);
+
+    processedBuffer = processor->process_image(buffer, buffSize, palette, width, height, &processedSize);
+
+    *size = processedSize;
+    return processedBuffer;
+}
+

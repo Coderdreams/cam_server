@@ -1,0 +1,84 @@
+9
+
+dir
+883
+http://200.40.84.46:7070/svn/visualpos/Code/Branches/PosScreenSurveillance/resources/cam_server
+http://200.40.84.46:7070/svn/visualpos
+
+
+
+2009-08-17T21:03:31.453125Z
+883
+pablo
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f271c3fb-7839-b54f-b443-e9b782cc14f8
+
+
+
+
+
+
+0
+
+capture
+dir
+
+include
+dir
+
+src
+dir
+
+libs
+dir
+
+surveillance
+dir
+
+Makefile
+file
+882
+
+
+
+2009-08-13T19:20:08.000000Z
+ad18af15a2454b56927eacf9856ddd59
+2009-08-13T19:07:44.546875Z
+878
+pablo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2705
+

@@ -1,0 +1,65 @@
+#include "CameraServer.hxx"
+#include "Server.hxx"
+
+CameraServer* cam_server;
+
+JNIEXPORT void JNICALL Java_org_com_uy_scanntech_surveillance_CameraServer_startServer
+  (JNIEnv *env, jobject obj, jstring dev_name, jint v4lVersion, jboolean banner, jstring title, jstring subtitle, jstring positionedText, jint portNumber, jstring font, jint fontsize, jlong fontColor)
+{
+    const char *_dev_name = env->GetStringUTFChars(dev_name, 0);
+    const char *_title = env->GetStringUTFChars(title, 0);
+    const char *_subtitle = env->GetStringUTFChars(subtitle, 0);
+    const char *_positionedText = env->GetStringUTFChars(positionedText, 0);
+    const char *_font = env->GetStringUTFChars(font, 0);
+
+    ImageProcessorOptions options;
+
+    options.drawBanner = drawBanner;
+    options.title = title;
+    options.subtitle = subtitle;
+    options.positionedText = positionedText;
+    options.font = font;
+    options.fontsize = fontsize;
+    options.fg_colour = fontColor
+
+    cam_server = new CameraServer((char*)_dev_name, (int)v4lVersion, (bool) banner, (char*)_title, (char*)_subtitle, (char*) _positionedText, (int)portNumber, (char*)_font, (int) fontSize, (uint32_t) fontColor);
+    cam_server->startThread(); 
+}
+
+JNIEXPORT void JNICALL Java_org_com_uy_scanntech_surveillance_CameraServer_stopServer
+  (JNIEnv *env, jobject obj)
+{
+    cam_server->stopThread();
+    delete cam_server;
+}
+
+JNIEXPORT void JNICALL Java_org_com_uy_scanntech_surveillance_CameraServer_setPositionedText
+  (JNIEnv *env, jobject obj, jstring _positionedText)
+{
+    const char *positionedText = env->GetStringUTFChars(_positionedText, 0);
+    cam_server->setPositionedText((char*)positionedText);
+}
+
+JNIEXPORT void JNICALL Java_org_com_uy_scanntech_surveillance_CameraServer_clearPositionedText
+  (JNIEnv *env, jobject obj)
+{
+    cam_server->clearPositionedText();
+}
+
+JNIEXPORT jintArray JNICALL Java_org_com_uy_scanntech_surveillance_CameraServer_getImageSize
+  (JNIEnv *env, jobject obj)
+{
+    int* imageSize = cam_server->getImageSize();
+    jintArray result = env->NewIntArray(2);
+    jint* destArrayElems = env->GetIntArrayElements(result, 0);
+    for (int i = 0; i < 2; i++) {
+        destArrayElems[i] = imageSize[i];
+    }
+    env->ReleaseIntArrayElements(result, destArrayElems, 0);
+    free(imageSize);
+    return result;
+}
+
+
+
+

@@ -1,0 +1,38 @@
+package org.com.uy.scanntech.surveillance;
+
+public class Test {
+	public static void main(String[] args) {
+		
+		System.out.println("levantando\n");
+		
+		CameraServer cam = new CameraServer();
+		cam.startServer("/dev/video0", 1, true, "hola1", "hola2", "", 10500);
+		
+		
+		try {
+			java.lang.Thread.currentThread().sleep(3000);
+		} catch (InterruptedException ie){
+		}
+		
+		cam.stopServer();
+		
+		cam.startServer("/dev/video0", 1, true, "hola1", "hola2", "", 10500);
+
+		
+		
+		int i = 0;
+		while(true) {
+			int[] size = cam.getImageSize();
+
+			System.out.println("width: " + (size[0]) + " height: " + (size[1]) + "\n");	
+			cam.clearPositionedText();
+			cam.setPositionedText("10|20|RUN COUNT: " + (i++));
+			cam.setPositionedText("10|40|SOME OTHER TEXT");
+	
+			try {
+				java.lang.Thread.currentThread().sleep(1000);
+			} catch (InterruptedException ie){
+			}
+		}
+	}
+}

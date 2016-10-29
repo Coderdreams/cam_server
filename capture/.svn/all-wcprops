@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/visualpos/!svn/ver/872/Code/Branches/PosScreenSurveillance/resources/cam_server/capture
+END
+ICapture.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/visualpos/!svn/ver/890/Code/Branches/PosScreenSurveillance/resources/cam_server/capture/ICapture.hxx
+END
+ImageProcessor.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/visualpos/!svn/ver/890/Code/Branches/PosScreenSurveillance/resources/cam_server/capture/ImageProcessor.cxx
+END
+ImageProcessor.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/visualpos/!svn/ver/890/Code/Branches/PosScreenSurveillance/resources/cam_server/capture/ImageProcessor.hxx
+END
+capture-v4l1.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/visualpos/!svn/ver/890/Code/Branches/PosScreenSurveillance/resources/cam_server/capture/capture-v4l1.cxx
+END
+capture-v4l2.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/visualpos/!svn/ver/890/Code/Branches/PosScreenSurveillance/resources/cam_server/capture/capture-v4l2.cxx
+END
+capture-v4l1.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/visualpos/!svn/ver/890/Code/Branches/PosScreenSurveillance/resources/cam_server/capture/capture-v4l1.hxx
+END
+capture-v4l2.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/visualpos/!svn/ver/890/Code/Branches/PosScreenSurveillance/resources/cam_server/capture/capture-v4l2.hxx
+END

@@ -1,0 +1,20 @@
+package org.com.uy.scanntech.surveillance;
+
+public class CameraServer {
+	
+	static
+	{
+		System.load("/usr/local/lib/libcameraserver.so");
+	}
+
+	public native void startServer(String dev_name, int v4lVersion, boolean banner, String title, String subtitle, String positionedText, int portNumber);
+	
+	public native void stopServer();
+	
+	public native void setPositionedText(String positionedText);
+	
+	public native void clearPositionedText();
+	
+	public native int[] getImageSize();
+
+}

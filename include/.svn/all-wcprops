@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/visualpos/!svn/ver/876/Code/Branches/PosScreenSurveillance/resources/cam_server/include
+END
+HttpClient.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/visualpos/!svn/ver/869/Code/Branches/PosScreenSurveillance/resources/cam_server/include/HttpClient.hxx
+END
+CameraServer.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/visualpos/!svn/ver/890/Code/Branches/PosScreenSurveillance/resources/cam_server/include/CameraServer.hxx
+END
+IFrameFetcher.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/visualpos/!svn/ver/876/Code/Branches/PosScreenSurveillance/resources/cam_server/include/IFrameFetcher.hxx
+END
+HttpServer.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/visualpos/!svn/ver/883/Code/Branches/PosScreenSurveillance/resources/cam_server/include/HttpServer.hxx
+END
+Server.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/visualpos/!svn/ver/890/Code/Branches/PosScreenSurveillance/resources/cam_server/include/Server.hxx
+END
+Camera.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/visualpos/!svn/ver/869/Code/Branches/PosScreenSurveillance/resources/cam_server/include/Camera.hxx
+END
